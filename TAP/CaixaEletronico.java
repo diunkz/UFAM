@@ -126,7 +126,7 @@ class CaixaEletronico {
             numero %= 50;
             System.out.printf("%d notas de R$10 ", numero / 10);
             numero %= 10;
-            System.out.printf("e %d notas de R$2, ", numero / 2);
+            System.out.printf("e %d notas de R$2", numero / 2);
 
         }
     }
