@@ -21,6 +21,7 @@ class ParImpar {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int valor = scan.nextInt();
+        scan.close();
 
         do {
             if (valor % 2 == 0) {
@@ -32,7 +33,6 @@ class ParImpar {
             valor = scan.nextInt();
         } while (valor != -1);
 
-        scan.close();
     }
 }
 
@@ -40,6 +40,7 @@ class AnimaisCedulas {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int cedula = scan.nextInt();
+        scan.close();
 
         switch (cedula) {
             case 2:
@@ -69,7 +70,6 @@ class AnimaisCedulas {
             default:
                 System.out.println("erro");
         }
-        scan.close();
     }
 }
 
@@ -96,6 +96,7 @@ class AngryBirds {
         float vo = scan.nextFloat();
         float alpha = scan.nextFloat();
         float distancia = scan.nextFloat();
+        scan.close();
 
         double r = Math.pow(Math.abs(vo), 2) * Math.sin(2 * Math.toRadians(alpha)) / 9.8;
 
