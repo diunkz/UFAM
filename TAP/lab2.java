@@ -118,6 +118,7 @@ class CaixaEletronico {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int numero = scan.nextInt();
+        scan.close();
 
         if (numero % 2 != 0 || numero < 0) {
             System.out.println("Valor Invalido");
@@ -137,6 +138,7 @@ class AreaTriangulo {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
+        scan.close();
         double area;
         double s = (a + b + c) / 2;
         if ((a + b) > c) {
@@ -145,5 +147,22 @@ class AreaTriangulo {
         } else {
             System.out.println("Triangulo Invalido");
         }
+    }
+}
+
+class SomaDigitos {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int numero = scan.nextInt();
+        scan.close();
+        int resultado = 0;
+
+        while (numero != 0) {
+            resultado += numero % 10;
+            numero /= 10;
+        }
+
+        System.out.println(resultado);
+
     }
 }
