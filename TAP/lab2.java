@@ -126,8 +126,24 @@ class CaixaEletronico {
             numero %= 50;
             System.out.printf("%d notas de R$10 ", numero / 10);
             numero %= 10;
-            System.out.printf("e %d notas de R$2, ", numero / 2);
+            System.out.printf("e %d notas de R$2", numero / 2);
+        }
+    }
+}
 
+class AreaTriangulo {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int a = scan.nextInt();
+        int b = scan.nextInt();
+        int c = scan.nextInt();
+        double area;
+        double s = (a + b + c) / 2;
+        if ((a + b) > c) {
+            area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+            System.out.printf("%.2f", area);
+        } else {
+            System.out.println("Triangulo Invalido");
         }
     }
 }
