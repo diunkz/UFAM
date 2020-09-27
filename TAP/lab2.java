@@ -345,3 +345,29 @@ class ContaEnergia {
 
     }
 }
+
+/*
+ * class VolumeCombustivel { public static void main(String[] args) { Scanner
+ * scan = new Scanner(System.in); int H = scan.nextInt(); int h =
+ * scan.nextInt(); int r = scan.nextInt(); scan.close(); if (H <= 0 || h <= 0 ||
+ * r <= 0) { double volumeesfera = (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
+ * double volumecalota = (Math.PI / 3.0) * Math.pow(x, 2) * (3 * r - x); double
+ * volumecilindro = Math.PI * Math.pow(r, 2) * x;
+ * 
+ * } else { System.out.println("-1.00"); }
+ * 
+ * } }
+ */
+class SomaColecao {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int entrada = 0;
+        int total = 0;
+
+        while (entrada != -1) {
+            total += entrada;
+            entrada = scan.nextInt();
+        }
+        System.out.println(total);
+    }
+}
