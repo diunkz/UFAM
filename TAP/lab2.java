@@ -307,3 +307,41 @@ class AnimaisCedulas {
         }
     }
 }
+
+class ContaEnergia {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double consumo = scan.nextDouble();
+        String tipo = scan.next();
+        scan.close();
+
+        if (consumo > 0) {
+            if (tipo.equals("R")) {
+                if (consumo <= 500) {
+                    consumo *= 0.40;
+                } else {
+                    consumo *= 0.65;
+                }
+            } else if (tipo.equals("C")) {
+                if (consumo <= 1000) {
+                    consumo *= 0.55;
+                } else {
+                    consumo *= 0.60;
+                }
+            } else if (tipo.equals("I")) {
+                if (consumo <= 5000) {
+                    consumo *= 0.55;
+                } else {
+                    consumo *= 0.60;
+                }
+            } else {
+                consumo = -1.0;
+            }
+        } else {
+            consumo = -1.0;
+        }
+
+        System.out.printf("%.2f", consumo);
+
+    }
+}
