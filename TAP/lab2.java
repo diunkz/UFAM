@@ -248,3 +248,25 @@ class TanqueCombustivel {
 
     }
 }
+
+class TipoTriangulo {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int medidaum = scan.nextInt();
+        int medidadois = scan.nextInt();
+        int medidatres = scan.nextInt();
+
+        if (medidatres >= medidaum + medidadois) {
+            System.out.println("invalido");
+        } else {
+            if (medidaum == medidadois && medidadois == medidatres) {
+                System.out.println("equilatero");
+            } else if (medidaum == medidadois || medidaum == medidatres || medidadois == medidatres) {
+                System.out.println("isosceles");
+            } else {
+                System.out.println("escaleno");
+            }
+        }
+
+    }
+}
