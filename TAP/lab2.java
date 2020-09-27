@@ -396,5 +396,23 @@ class SomaColecoes {
                 total = 0;
             }
         }
+        scan.close();
+    }
+}
+
+class MediaColecao {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int entrada = 0;
+        double media = 0.0;
+        int numerodevezes = -1;
+
+        while (entrada != -1) {
+            numerodevezes += 1;
+            media += entrada;
+            entrada = scan.nextInt();
+        }
+        scan.close();
+        System.out.printf("%.2f", media / numerodevezes);
     }
 }
