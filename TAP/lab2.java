@@ -230,3 +230,21 @@ class Desconto {
         System.out.printf("%.2f", entrada);
     }
 }
+
+class TanqueCombustivel {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double r = scan.nextDouble();
+        double x = scan.nextDouble();
+        double opcao = scan.nextDouble();
+        double v = (Math.PI / 3.0) * Math.pow(x, 2) * (3 * r - x);
+        scan.close();
+
+        if (opcao == 2) {
+            v = ((4.0 / 3.0) * Math.PI * Math.pow(r, 3)) - v;
+        }
+
+        System.out.printf("%.4f", v);
+
+    }
+}
