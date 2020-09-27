@@ -216,3 +216,17 @@ class PontoReta {
         }
     }
 }
+
+class Desconto {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double entrada = scan.nextDouble();
+        scan.close();
+
+        if (entrada >= 200.00) {
+            entrada *= 0.95;
+        }
+
+        System.out.printf("%.2f", entrada);
+    }
+}
