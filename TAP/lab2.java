@@ -368,6 +368,33 @@ class SomaColecao {
             total += entrada;
             entrada = scan.nextInt();
         }
+        scan.close();
         System.out.println(total);
+    }
+}
+
+class SomaColecoes {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int atual = 0;
+        int total = 0;
+        int contador = 0;
+        boolean executar = true;
+
+        while (executar == true) {
+            atual = scan.nextInt();
+            if (atual != -1) {
+                total += atual;
+                contador = 0;
+            } else if (atual == -1) {
+                contador += 1;
+                if (contador == 1) {
+                    System.out.println(total);
+                } else if (contador == 2) {
+                    executar = false;
+                }
+                total = 0;
+            }
+        }
     }
 }
