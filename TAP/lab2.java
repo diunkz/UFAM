@@ -416,3 +416,34 @@ class MediaColecao {
         System.out.printf("%.2f", media / numerodevezes);
     }
 }
+
+class AproximacaoPi {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double entrada = scan.nextDouble();
+        scan.close();
+        double aproximacao = 0.0;
+        int i = 1;
+        int pulo = 0;
+
+        if (entrada == 0) {
+            System.out.printf("%.6f\n", aproximacao);
+        } else {
+            while (i <= entrada) {
+                if (i == 1) {
+                    aproximacao += 3.0;
+                } else {
+                    if (i % 2 != 0) {
+                        aproximacao -= 4.0 / (pulo * (pulo + 1) * (pulo + 2));
+                    } else {
+                        aproximacao += 4.0 / (pulo * (pulo + 1) * (pulo + 2));
+                    }
+                }
+
+                System.out.printf("%.6f\n", aproximacao);
+                i++;
+                pulo += 2;
+            }
+        }
+    }
+}
