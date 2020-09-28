@@ -532,3 +532,66 @@ class PorcentagemAcerto {
 
     }
 }
+/*
+ * class AreaPoligono { public static void main(String[] args) {
+ * 
+ * } }
+ */
+
+class DataExtenso {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int entrada = scan.nextInt();
+        scan.close();
+        String messtring = "";
+        int dia, mes, ano;
+
+        ano = entrada % 10000;
+        entrada /= 10000;
+        mes = entrada % 100;
+        entrada /= 100;
+        dia = entrada;
+
+        switch (mes) {
+            case 1:
+                messtring = "janeiro";
+                break;
+            case 2:
+                messtring = "fevereiro";
+                break;
+            case 3:
+                messtring = "março";
+                break;
+            case 4:
+                messtring = "abril";
+                break;
+            case 5:
+                messtring = "maio";
+                break;
+            case 6:
+                messtring = "junho";
+                break;
+            case 7:
+                messtring = "julho";
+                break;
+            case 8:
+                messtring = "agosto";
+                break;
+            case 9:
+                messtring = "setembro";
+                break;
+            case 10:
+                messtring = "outubro";
+                break;
+            case 11:
+                messtring = "novembro";
+                break;
+            case 12:
+                messtring = "dezembro";
+                break;
+        }
+
+        System.out.printf("%d de %s de %d", dia, messtring, ano);
+
+    }
+}
