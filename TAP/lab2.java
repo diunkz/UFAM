@@ -676,6 +676,7 @@ class OperacoesInteiros {
                 condicao = false;
             }
         }
+        scan.close();
     }
 }
 
@@ -692,6 +693,8 @@ class Mediana {
                 valores.add(entrada);
             }
         } while (entrada != -1);
+
+        scan.close();
 
         if (valores.size() % 2 != 0) {
             mediana = valores.get(valores.size() / 2);
@@ -727,6 +730,8 @@ class TimeFutebol {
                 resultadodois.add(entrada);
             }
         } while (entrada != -1);
+
+        scan.close();
 
         for (int a = 0; a < resultadoum.size(); a++) {
             if (resultadoum.get(a) > resultadodois.get(a)) {
@@ -769,8 +774,8 @@ class AprovacaoDisciplina {
         } while (entradapresenca != -1);
 
         cargahoraria = scan.nextInt();
+        scan.close();
         cargahoraria *= 0.75;
-
         for (int i = 0; i < notas.size(); i++) {
             if (notas.get(i) >= 5.0 && presenca.get(i) >= cargahoraria) {
                 alunosaprovados += 1;
@@ -782,6 +787,49 @@ class AprovacaoDisciplina {
         }
 
         System.out.printf("%d %d %d", alunosaprovados, alunosreprovadospornota, alunosreprovadosporfrequencia);
+
+    }
+}
+
+class DiaSemana {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> horasdetrabalho = new ArrayList<Integer>();
+        ArrayList<ArrayList> funcionarios = new ArrayList<ArrayList>();
+        ArrayList<Integer> somahoras = new ArrayList<Integer>();
+        int soma = 0;
+        int entrada = 0;
+
+        do {
+            for (int i = 0; i < 7; i++) {
+                entrada = scan.nextInt();
+                if (entrada != -1) {
+                    horasdetrabalho.add(entrada);
+                } else {
+                    break;
+                }
+            }
+            if (entrada != -1) {
+                funcionarios.add(horasdetrabalho);
+            }
+            horasdetrabalho = new ArrayList<Integer>();
+        } while (entrada != -1);
+
+        scan.close();
+
+        for (int i = 0; i < 7; i++) {
+            soma = 0;
+            for (int j = 0; j < funcionarios.size(); j++) {
+                soma += (int) funcionarios.get(j).get(i);
+            }
+            somahoras.add(soma);
+        }
+
+        for (int i = 0; i < somahoras.size(); i++) {
+            if (Collections.max(somahoras) == somahoras.get(i)) {
+                System.out.println(i + 1);
+            }
+        }
 
     }
 }
