@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 class HelloUfam {
     public static void main(String[] args) {
@@ -593,5 +594,87 @@ class DataExtenso {
 
         System.out.printf("%d de %s de %d", dia, messtring, ano);
 
+    }
+}
+/*
+ * class CifraCesar { public static void main(String[] args) { Scanner scan =
+ * new Scanner(System.in); int deslocamento = scan.nextInt(); String texto =
+ * scan.nextLine(); scan.close();
+ * 
+ * } }
+ */
+
+class Palindromos {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String entrada = scan.nextLine();
+        scan.close();
+        entrada = entrada.replaceAll(" ", "");
+        String contrario = "";
+
+        for (int i = (entrada.length() - 1); i >= 0; i--) {
+            contrario = contrario + entrada.charAt(i);
+        }
+
+        if (contrario.toLowerCase().equals(entrada.toLowerCase())) {
+            System.out.printf("%s 1", contrario.toUpperCase());
+        } else {
+            System.out.printf("%s 0", entrada.toUpperCase());
+        }
+    }
+}
+
+class OperacoesInteiros {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int entrada = scan.nextInt();
+        int contadorpares = 0;
+        int contadorimpares = 0;
+        int soma = 0;
+        float media = 0.00f;
+        int maior = 0;
+        int menor = 0;
+
+        ArrayList<Integer> vetor = new ArrayList<Integer>();
+        boolean condicao = true;
+        while (condicao == true) {
+            while (entrada != -1) {
+                vetor.add(entrada);
+                entrada = scan.nextInt();
+            }
+            for (int i = 0; i < vetor.size(); i++) {
+                if (vetor.get(i) % 2 == 0) {
+                    contadorpares++;
+                } else {
+                    contadorimpares++;
+                }
+                soma += vetor.get(i);
+            }
+
+            media = soma / (float) vetor.size();
+            maior = Collections.max(vetor);
+            menor = Collections.min(vetor);
+
+            System.out.println(vetor.size());
+            System.out.println(contadorpares);
+            System.out.println(contadorimpares);
+            System.out.println(soma);
+            System.out.printf("%.2f\n", media);
+            System.out.println(maior);
+            System.out.println(menor);
+
+            contadorpares = 0;
+            contadorimpares = 0;
+            soma = 0;
+            media = 0.00f;
+            maior = 0;
+            menor = 0;
+            vetor = new ArrayList<Integer>();
+
+            entrada = scan.nextInt();
+            if (entrada == -1) {
+                condicao = false;
+            }
+        }
     }
 }
