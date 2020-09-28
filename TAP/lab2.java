@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 class HelloUfam {
@@ -496,5 +497,38 @@ class AproximacaoSeno {
             cont += 2;
             fatorial = 1;
         }
+    }
+}
+
+class PorcentagemAcerto {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> prova = new ArrayList<Integer>();
+        ArrayList<Integer> gabarito = new ArrayList<Integer>();
+        double resultado = 0.0;
+        int entrada = scan.nextInt();
+
+        while (entrada != -1) {
+            gabarito.add(entrada);
+            entrada = scan.nextInt();
+        }
+
+        entrada = scan.nextInt();
+
+        while (entrada != -1) {
+            prova.add(entrada);
+            entrada = scan.nextInt();
+        }
+
+        scan.close();
+
+        for (int a = 0; a < prova.size(); a++) {
+            if (prova.get(a) == gabarito.get(a)) {
+                resultado++;
+            }
+        }
+
+        System.out.printf("%.2f", (resultado / prova.size()) * 100);
+
     }
 }
