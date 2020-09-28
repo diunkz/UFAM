@@ -472,3 +472,29 @@ class NumeroNeperiano {
     }
 
 }
+
+class AproximacaoSeno {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double angulo = Math.toRadians(scan.nextDouble());
+        double k = scan.nextDouble();
+        double cont = 1;
+        double fatorial = 1;
+        double resultado = 0.0;
+        scan.close();
+
+        for (double i = 0; i < k; i++) {
+            for (double x = cont; x > 1; x--) {
+                fatorial *= x;
+            }
+            if (i % 2 == 0) {
+                resultado += (Math.pow(angulo, cont) / fatorial);
+            } else {
+                resultado -= (Math.pow(angulo, cont) / fatorial);
+            }
+            System.out.printf("%.10f\n", resultado);
+            cont += 2;
+            fatorial = 1;
+        }
+    }
+}
