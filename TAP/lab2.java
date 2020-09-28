@@ -741,3 +741,47 @@ class TimeFutebol {
         System.out.printf("%d %d %d", numerovitorias, numeroempates, numeroderrotas);
     }
 }
+
+class AprovacaoDisciplina {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Double> notas = new ArrayList<Double>();
+        ArrayList<Integer> presenca = new ArrayList<Integer>();
+        double entradanota = 0.0;
+        int entradapresenca = 0;
+        int cargahoraria = 0;
+        int alunosaprovados = 0;
+        int alunosreprovadospornota = 0;
+        int alunosreprovadosporfrequencia = 0;
+
+        do {
+            entradanota = scan.nextDouble();
+            if (entradanota != -1) {
+                notas.add(entradanota);
+            }
+        } while (entradanota != -1);
+
+        do {
+            entradapresenca = scan.nextInt();
+            if (entradapresenca != -1) {
+                presenca.add(entradapresenca);
+            }
+        } while (entradapresenca != -1);
+
+        cargahoraria = scan.nextInt();
+        cargahoraria *= 0.75;
+
+        for (int i = 0; i < notas.size(); i++) {
+            if (notas.get(i) >= 5.0 && presenca.get(i) >= cargahoraria) {
+                alunosaprovados += 1;
+            } else if (notas.get(i) < 5.0) {
+                alunosreprovadospornota += 1;
+            } else if (presenca.get(i) < cargahoraria) {
+                alunosreprovadosporfrequencia += 1;
+            }
+        }
+
+        System.out.printf("%d %d %d", alunosaprovados, alunosreprovadospornota, alunosreprovadosporfrequencia);
+
+    }
+}
