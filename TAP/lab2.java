@@ -678,3 +678,28 @@ class OperacoesInteiros {
         }
     }
 }
+
+class Mediana {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> valores = new ArrayList<Integer>();
+        int entrada = 0;
+        double mediana = 0.0;
+
+        do {
+            entrada = scan.nextInt();
+            if (entrada != -1) {
+                valores.add(entrada);
+            }
+        } while (entrada != -1);
+
+        if (valores.size() % 2 != 0) {
+            mediana = valores.get(valores.size() / 2);
+        } else {
+            mediana = valores.get(valores.size() / 2);
+            mediana += valores.get(valores.size() / 2 - 1);
+            mediana /= 2.0;
+        }
+        System.out.println(mediana);
+    }
+}
