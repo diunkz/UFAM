@@ -703,3 +703,41 @@ class Mediana {
         System.out.println(mediana);
     }
 }
+
+class TimeFutebol {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        ArrayList<Integer> resultadoum = new ArrayList<Integer>();
+        ArrayList<Integer> resultadodois = new ArrayList<Integer>();
+        int entrada = 0;
+        int numerovitorias = 0;
+        int numeroempates = 0;
+        int numeroderrotas = 0;
+
+        do {
+            entrada = scan.nextInt();
+            if (entrada != -1) {
+                resultadoum.add(entrada);
+            }
+        } while (entrada != -1);
+
+        do {
+            entrada = scan.nextInt();
+            if (entrada != -1) {
+                resultadodois.add(entrada);
+            }
+        } while (entrada != -1);
+
+        for (int a = 0; a < resultadoum.size(); a++) {
+            if (resultadoum.get(a) > resultadodois.get(a)) {
+                numerovitorias += 1;
+            } else if (resultadoum.get(a) == resultadodois.get(a)) {
+                numeroempates += 1;
+            } else {
+                numeroderrotas += 1;
+            }
+        }
+
+        System.out.printf("%d %d %d", numerovitorias, numeroempates, numeroderrotas);
+    }
+}
