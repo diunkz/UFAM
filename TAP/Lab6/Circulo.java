@@ -9,7 +9,7 @@ public class Circulo extends FormaGeometrica {
     }
 
     public double getArea() {
-        return Math.PI * Math.pow(this.raio, 2);
+        return Math.PI * this.raio * this.raio;
     }
 
     public double getPerimetro() {
@@ -17,8 +17,8 @@ public class Circulo extends FormaGeometrica {
     }
 
     public String toString() {
-        return String.format("Círculo na %s com raio de %.1fcm (área=%.14fcm2, perímetro=%.14fcm)", getPosString(),
-                this.raio, getArea(), getPerimetro());
+        return ("Círculo na " + getPosString() + "com raio de " + this.raio + "cm (área=" + getArea()
+                + "cm2, perímetro=" + getPerimetro() + "cm)");
     }
 
 }
