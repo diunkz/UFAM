@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VotacaoController">
+   <children>
+      <AnchorPane prefHeight="88.0" prefWidth="601.0">
+         <children>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="3.0" prefHeight="88.0" prefWidth="600.0" text="Votação">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="sairButton" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" ellipsisString="" layoutX="559.0" layoutY="14.0" mnemonicParsing="false" onAction="#sairButtonOnAction" style="-fx-background-color: #FF0000;" text="X" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="voltarButton" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" ellipsisString="" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarButtonOnAction" style="-fx-background-color: #009d92;" text="&lt;" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label alignment="CENTER" layoutX="244.0" layoutY="105.0" prefHeight="26.0" prefWidth="113.0" text="Título de Eleitor" />
+      <TextField fx:id="tituloTextField" layoutX="215.0" layoutY="137.0" />
+      <Label alignment="CENTER" layoutX="227.0" layoutY="180.0" prefHeight="26.0" prefWidth="148.0" text="Numero do Candidato" />
+      <TextField fx:id="numeroCandidatoTextField" layoutX="215.0" layoutY="215.0" />
+      <Button fx:id="votarButton" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="286.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="120.0" style="-fx-background-color: #a1d01f;" text="VOTAR" textAlignment="CENTER" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="finalizarVotacaoButton" alignment="CENTER" contentDisplay="CENTER" layoutX="450.0" layoutY="344.0" mnemonicParsing="false" onAction="#finalizarVotacaoButtonOnAction" prefHeight="32.0" prefWidth="129.0" style="-fx-background-color: #ff2323;" text="FINALIZAR" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+   </children>
+</Pane>

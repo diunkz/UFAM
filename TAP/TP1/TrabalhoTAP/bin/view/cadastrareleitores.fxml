@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CadastrarEleitoresController">
+   <children>
+      <AnchorPane prefHeight="88.0" prefWidth="601.0">
+         <children>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="3.0" prefHeight="88.0" prefWidth="600.0" text="Cadastro de Eleitores">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="sairButton" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" ellipsisString="" layoutX="559.0" layoutY="14.0" mnemonicParsing="false" onAction="#sairButtonOnAction" style="-fx-background-color: #FF0000;" text="X" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="voltarButton" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" ellipsisString="" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarButtonOnAction" style="-fx-background-color: #009d92;" text="&lt;" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="72.0" layoutY="91.0" prefHeight="307.0" prefWidth="228.0">
+         <children>
+            <Label contentDisplay="CENTER" layoutX="4.0" layoutY="53.0" prefHeight="19.0" prefWidth="171.0" text="Eleitor" textAlignment="CENTER">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="4.0" layoutY="116.0" prefHeight="19.0" prefWidth="171.0" text="Título de Eleitor">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="mensagemVerdeCadastroLabel" alignment="CENTER" layoutY="159.0" prefHeight="16.0" prefWidth="454.0" textFill="#148a3d" />
+            <Label fx:id="mensagemVermelhaCadastroLabel" alignment="CENTER" layoutX="-1.0" layoutY="159.0" prefHeight="16.0" prefWidth="455.0" textFill="RED" />
+            <Button fx:id="CadastrarEleitorButton" alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="195.0" mnemonicParsing="false" onAction="#cadastrarEleitorButtonOnAction" prefHeight="58.0" prefWidth="120.0" style="-fx-background-color: #a1d01f;" text="Cadastrar" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="301.0" layoutY="91.0" prefHeight="150.0" prefWidth="228.0">
+         <children>
+            <TextField fx:id="eleitorTextField" layoutX="-51.0" layoutY="53.0" prefHeight="26.0" prefWidth="278.0" promptText="Eleitor" />
+            <TextField fx:id="tituloTextField" layoutX="-51.0" layoutY="111.0" prefHeight="26.0" prefWidth="278.0" promptText="Título de Eleitor" />
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="220.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="brandingImageView" fitHeight="400.0" fitWidth="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/logo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="332.0" style="-fx-background-color: #e2e2e2;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="lockImageView" fitHeight="68.0" fitWidth="72.0" layoutX="114.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/lock.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="30.0" layoutY="127.0" text="Usuário:" />
+            <TextField fx:id="usernameTextField" layoutX="94.0" layoutY="122.0" promptText="Usuário">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></TextField>
+            <Label layoutX="30.0" layoutY="179.0" text="Senha:" />
+            <PasswordField fx:id="enterPasswordField" layoutX="94.0" layoutY="174.0" promptText="Senha">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor></PasswordField>
+            <Button fx:id="loginButtonAction" layoutX="26.0" layoutY="256.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="46.0" prefWidth="244.0" style="-fx-background-color: #009d92;" text="Entrar" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="cancelButton" layoutX="26.0" layoutY="316.0" mnemonicParsing="false" onAction="#cancelButtonOnAction" prefHeight="46.0" prefWidth="244.0" style="-fx-background-color: #009d92;" text="Sair" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="loginMessageLabel" alignment="CENTER" layoutX="9.0" layoutY="219.0" prefHeight="16.0" prefWidth="278.0" textFill="RED" />
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

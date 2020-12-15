@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FinalController">
+   <children>
+      <AnchorPane prefHeight="88.0" prefWidth="601.0">
+         <children>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="3.0" prefHeight="88.0" prefWidth="600.0" text="O vencedor é ...">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="sairButton" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" ellipsisString="" layoutX="559.0" layoutY="14.0" mnemonicParsing="false" onAction="#sairButtonOnAction" style="-fx-background-color: #FF0000;" text="X" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="verButton" layoutX="240.0" layoutY="130.0" mnemonicParsing="false" onAction="#verButtonOnAction" prefHeight="26.0" prefWidth="121.0" style="-fx-background-color: #a1d01f;" text="Ver">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="vencedorTextField" alignment="CENTER" editable="false" layoutX="206.0" layoutY="228.0" prefHeight="52.0" prefWidth="188.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+   </children>
+</Pane>

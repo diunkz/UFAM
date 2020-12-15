@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.EditarCandidatosController">
+   <children>
+      <AnchorPane prefHeight="88.0" prefWidth="601.0">
+         <children>
+            <Label alignment="CENTER" layoutX="1.0" layoutY="3.0" prefHeight="88.0" prefWidth="600.0" text="Edição de Candidatos">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Label>
+            <Button fx:id="sairButton" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" ellipsisString="" layoutX="559.0" layoutY="14.0" mnemonicParsing="false" onAction="#sairButtonOnAction" style="-fx-background-color: #FF0000;" text="X" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="voltarButton" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" ellipsisString="" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#voltarButtonOnAction" style="-fx-background-color: #009d92;" text="&lt;" textAlignment="RIGHT" textFill="WHITE" wrapText="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="72.0" layoutY="91.0" prefHeight="307.0" prefWidth="228.0">
+         <children>
+            <Label fx:id="mensagemVerdeCadastroLabel" alignment="CENTER" layoutY="265.0" prefHeight="16.0" prefWidth="455.0" textFill="#148a3d" />
+            <Label fx:id="mensagemVermelhaCadastroLabel" alignment="CENTER" layoutY="265.0" prefHeight="16.0" prefWidth="456.0" textFill="RED" />
+            <Button fx:id="editarCandidatoButton" alignment="CENTER" contentDisplay="CENTER" layoutX="168.0" layoutY="195.0" mnemonicParsing="false" onAction="#editarCandidatoButtonOnAction" prefHeight="58.0" prefWidth="120.0" style="-fx-background-color: #a1d01f;" text="Editar" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="idCandidatoTextField" alignment="CENTER" layoutX="-36.0" layoutY="141.0" prefHeight="26.0" prefWidth="149.0" promptText="ID Candidato" />
+            <TextField fx:id="nomeCandidatoTextField" alignment="CENTER" layoutX="153.0" layoutY="141.0" prefHeight="26.0" prefWidth="149.0" promptText="Nome Candidato" />
+            <TextField fx:id="numeroCandidatoTextField" alignment="CENTER" layoutX="338.0" layoutY="141.0" prefHeight="26.0" prefWidth="149.0" promptText="Número Candidato" />
+            <TextArea fx:id="mostrarCandidatosTextArea" layoutX="-9.0" layoutY="14.0" prefHeight="105.0" prefWidth="472.0" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="refreshImage" fitHeight="30.0" fitWidth="30.0" layoutX="542.0" layoutY="111.0" onMouseClicked="#refreshImageOnAction" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Images/refresh.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
